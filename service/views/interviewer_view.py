@@ -5,7 +5,6 @@ from rest_framework.generics import (
 
 from service.models.interviewer import Interviewer
 
-# from service.models.user import User
 from service.serializers.interviewer_serializer import InterviewerSerializer
 from rest_framework.response import Response
 

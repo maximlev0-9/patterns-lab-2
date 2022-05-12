@@ -3,7 +3,6 @@ import csv
 from rest_framework import status
 from rest_framework.generics import ListCreateAPIView
 from rest_framework.response import Response
-
 from service.models.candidate import Candidate
 from service.serializers.candidate_serializer import CandidateSerializer
 
@@ -22,7 +21,7 @@ class UploadDataCSVFile(ListCreateAPIView):
         for candidate_raw in reader:
             if candidate_raw[0] is not "id":
                 request_data = format_data(candidate_raw)
-                create_request_record(request_data)  # METHOD INJECTION
+                create_request_record(request_data)
         return Response("Uploaded", status=status.HTTP_201_CREATED)
 
 

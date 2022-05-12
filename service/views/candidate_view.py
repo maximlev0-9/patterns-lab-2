@@ -4,8 +4,6 @@ from rest_framework.generics import (
 )
 
 from service.models.candidate import Candidate
-
-# from service.models.user import User
 from service.serializers.candidate_serializer import CandidateSerializer
 from rest_framework.response import Response
 
